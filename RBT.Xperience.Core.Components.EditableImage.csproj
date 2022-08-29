@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <IsMvcProject>true</IsMvcProject>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>RBT.Xperience.Core.Components.EditableImage</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Vasu Yerramsetti</Authors>
+    <Company>Ray Business Technologies</Company>
+    <PackageIconUrl></PackageIconUrl>
+    <Description>It will render the image which can be seleted from media library and allows editors to add class, alt text, dimensions and redirection link to image.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Kentico.Xperience.AspNetCore.WebApp" Version="13.0.73" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="dotnet pack RBT.Xperience.Core.Components.EditableImage.csproj --no-build" />
+  </Target>
+
+</Project>

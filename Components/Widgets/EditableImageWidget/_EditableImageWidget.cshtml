@@ -1,0 +1,17 @@
+﻿@using RBT.Xperience.Core.Components
+@model EditableImageWidgetViewModel
+
+
+@if (Model != null )
+{
+    if (Model.RenderAsLink)
+    {
+        <a href="@Model.RedirectionURL" class="@Model.LinkCSSClass">
+            <img src="@Model.ImageURL" alt="@Model.AlternateText" class="@Model.ImageCSSClass"  />
+        </a>
+    }
+    else
+    {
+        <img src="@Model.ImageURL" alt="@Model.AlternateText" class="@Model.ImageCSSClass"  />
+    }
+}
