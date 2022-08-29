@@ -30,3 +30,9 @@ Please report any issues seen, in the issue list. We will address at the earlies
 # Compatibility
 
 This widget has been tested on Kentico Xperience 13.0.73 Core website and can be used on Kentico Xperience 13.0.73 Core  instance and higher. 
+# Uninstall instructions
+
+After uninstalling this package from the solution, if you are still seeing the widget on the page tab in Kentico CMS then please follow the below steps.
+
+Go to Solution -> Select Bin folder -> Select the specific widget dll(Ex:RBT.Xperience.Core.Components.EditableImage.dll & RBT.Xperience.Core.Components.EditableImage.Views.dll) and delete
+-> Rebuild the solution
